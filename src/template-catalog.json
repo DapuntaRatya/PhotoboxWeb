@@ -1,0 +1,1486 @@
+{
+  "backgrounds": [
+    {
+      "id": "set-balon-hati",
+      "label": "Balon Hati",
+      "group": "Romantis",
+      "colors": [
+        "#eed1cc",
+        "#a75566"
+      ],
+      "art": "/templates/sets/balon-hati.webp"
+    },
+    {
+      "id": "set-tirai-mawar",
+      "label": "Tirai Mawar Merah",
+      "group": "Romantis",
+      "colors": [
+        "#eed1cc",
+        "#a75566"
+      ],
+      "art": "/templates/sets/tirai-mawar.webp"
+    },
+    {
+      "id": "set-lengkung-pernikahan",
+      "label": "Lengkung Pernikahan",
+      "group": "Romantis",
+      "colors": [
+        "#eed1cc",
+        "#a75566"
+      ],
+      "art": "/templates/sets/lengkung-pernikahan.webp"
+    },
+    {
+      "id": "set-lampu-romantis",
+      "label": "Lampu Pesta Romantis",
+      "group": "Romantis",
+      "colors": [
+        "#eed1cc",
+        "#a75566"
+      ],
+      "art": "/templates/sets/lampu-romantis.webp"
+    },
+    {
+      "id": "set-pesta-manis",
+      "label": "Pesta Pastel",
+      "group": "Romantis",
+      "colors": [
+        "#eed1cc",
+        "#a75566"
+      ],
+      "art": "/templates/sets/pesta-manis.webp"
+    },
+    {
+      "id": "set-istana-rococo",
+      "label": "Istana Rococo",
+      "group": "Istana & Panggung",
+      "colors": [
+        "#9a7756",
+        "#2b2332"
+      ],
+      "art": "/templates/sets/istana-rococo.webp"
+    },
+    {
+      "id": "set-balkon-kastil",
+      "label": "Balkon Kastil",
+      "group": "Istana & Panggung",
+      "colors": [
+        "#9a7756",
+        "#2b2332"
+      ],
+      "art": "/templates/sets/balkon-kastil.webp"
+    },
+    {
+      "id": "set-balairung-biru",
+      "label": "Balairung Safir",
+      "group": "Istana & Panggung",
+      "colors": [
+        "#9a7756",
+        "#2b2332"
+      ],
+      "art": "/templates/sets/balairung-biru.webp"
+    },
+    {
+      "id": "set-lobi-art-deco",
+      "label": "Lobi Art Deco",
+      "group": "Istana & Panggung",
+      "colors": [
+        "#9a7756",
+        "#2b2332"
+      ],
+      "art": "/templates/sets/lobi-art-deco.webp"
+    },
+    {
+      "id": "set-teater-emas",
+      "label": "Teater Emas",
+      "group": "Istana & Panggung",
+      "colors": [
+        "#9a7756",
+        "#2b2332"
+      ],
+      "art": "/templates/sets/teater-emas.webp"
+    },
+    {
+      "id": "set-apartemen-senja",
+      "label": "Apartemen Senja",
+      "group": "Studio & Rumah",
+      "colors": [
+        "#c58a70",
+        "#64514b"
+      ],
+      "art": "/templates/sets/apartemen-senja.webp"
+    },
+    {
+      "id": "set-dapur-pagi",
+      "label": "Dapur Pagi",
+      "group": "Studio & Rumah",
+      "colors": [
+        "#c58a70",
+        "#64514b"
+      ],
+      "art": "/templates/sets/dapur-pagi.webp"
+    },
+    {
+      "id": "set-studio-putih",
+      "label": "Studio Cyclorama",
+      "group": "Studio & Rumah",
+      "colors": [
+        "#c58a70",
+        "#64514b"
+      ],
+      "art": "/templates/sets/studio-putih.webp"
+    },
+    {
+      "id": "set-ruang-rias",
+      "label": "Ruang Rias Merah Muda",
+      "group": "Studio & Rumah",
+      "colors": [
+        "#c58a70",
+        "#64514b"
+      ],
+      "art": "/templates/sets/ruang-rias.webp"
+    },
+    {
+      "id": "set-studio-kertas",
+      "label": "Studio Gulungan Kertas",
+      "group": "Studio & Rumah",
+      "colors": [
+        "#c58a70",
+        "#64514b"
+      ],
+      "art": "/templates/sets/studio-kertas.webp"
+    },
+    {
+      "id": "set-rumah-kaca",
+      "label": "Rumah Kaca Botani",
+      "group": "Taman",
+      "colors": [
+        "#9bb290",
+        "#325154"
+      ],
+      "art": "/templates/sets/rumah-kaca.webp"
+    },
+    {
+      "id": "set-taman-jepang",
+      "label": "Taman Batu Jepang",
+      "group": "Taman",
+      "colors": [
+        "#9bb290",
+        "#325154"
+      ],
+      "art": "/templates/sets/taman-jepang.webp"
+    },
+    {
+      "id": "set-lorong-sakura",
+      "label": "Lorong Sakura",
+      "group": "Taman",
+      "colors": [
+        "#9bb290",
+        "#325154"
+      ],
+      "art": "/templates/sets/lorong-sakura.webp"
+    },
+    {
+      "id": "set-padang-bunga",
+      "label": "Padang Bunga Senja",
+      "group": "Taman",
+      "colors": [
+        "#9bb290",
+        "#325154"
+      ],
+      "art": "/templates/sets/padang-bunga.webp"
+    },
+    {
+      "id": "set-air-mancur-bulan",
+      "label": "Air Mancur Cahaya Bulan",
+      "group": "Taman",
+      "colors": [
+        "#9bb290",
+        "#325154"
+      ],
+      "art": "/templates/sets/air-mancur-bulan.webp"
+    },
+    {
+      "id": "set-tokyo-hujan",
+      "label": "Tokyo Selepas Hujan",
+      "group": "Kota",
+      "colors": [
+        "#a08991",
+        "#3f3650"
+      ],
+      "art": "/templates/sets/tokyo-hujan.webp"
+    },
+    {
+      "id": "set-kafe-paris",
+      "label": "Kafe Paris",
+      "group": "Kota",
+      "colors": [
+        "#a08991",
+        "#3f3650"
+      ],
+      "art": "/templates/sets/kafe-paris.webp"
+    },
+    {
+      "id": "set-atap-kota",
+      "label": "Atap Kota Senja",
+      "group": "Kota",
+      "colors": [
+        "#a08991",
+        "#3f3650"
+      ],
+      "art": "/templates/sets/atap-kota.webp"
+    },
+    {
+      "id": "set-kanal-venesia",
+      "label": "Kanal Venesia",
+      "group": "Kota",
+      "colors": [
+        "#a08991",
+        "#3f3650"
+      ],
+      "art": "/templates/sets/kanal-venesia.webp"
+    },
+    {
+      "id": "set-lobi-bioskop",
+      "label": "Lobi Bioskop Lama",
+      "group": "Kota",
+      "colors": [
+        "#a08991",
+        "#3f3650"
+      ],
+      "art": "/templates/sets/lobi-bioskop.webp"
+    },
+    {
+      "id": "sky",
+      "label": "Langit",
+      "group": "Klasik",
+      "colors": [
+        "#c9e5ef",
+        "#8ab6d1"
+      ]
+    },
+    {
+      "id": "lilac",
+      "label": "Lilac",
+      "group": "Klasik",
+      "colors": [
+        "#e2d4f6",
+        "#b5a0d7"
+      ]
+    },
+    {
+      "id": "midnight",
+      "label": "Malam",
+      "group": "Klasik",
+      "colors": [
+        "#495070",
+        "#202436"
+      ]
+    },
+    {
+      "id": "sage",
+      "label": "Sage",
+      "group": "Klasik",
+      "colors": [
+        "#d8e1c8",
+        "#9bb79a"
+      ]
+    },
+    {
+      "id": "sand",
+      "label": "Pasir",
+      "group": "Klasik",
+      "colors": [
+        "#ffdab8",
+        "#e5a873"
+      ]
+    },
+    {
+      "id": "rose",
+      "label": "Mawar",
+      "group": "Klasik",
+      "colors": [
+        "#efb8bd",
+        "#cd8298"
+      ]
+    },
+    {
+      "id": "scene-ribbon",
+      "label": "Pita Studio",
+      "group": "Ilustrasi",
+      "colors": [
+        "#ded0f0",
+        "#a375b2"
+      ],
+      "art": "/templates/scene-ribbon.svg"
+    },
+    {
+      "id": "scene-desert-bloom",
+      "label": "Kaktus Senja",
+      "group": "Ilustrasi",
+      "colors": [
+        "#ffc495",
+        "#be7e78"
+      ],
+      "art": "/templates/scene-desert-bloom.svg"
+    },
+    {
+      "id": "scene-carnival",
+      "label": "Karnaval",
+      "group": "Ilustrasi",
+      "colors": [
+        "#b23453",
+        "#f4bd8c"
+      ],
+      "art": "/templates/scene-carnival.svg"
+    },
+    {
+      "id": "scene-ocean",
+      "label": "Laut Dalam",
+      "group": "Ilustrasi",
+      "colors": [
+        "#0b4865",
+        "#4babaa"
+      ],
+      "art": "/templates/scene-ocean.svg"
+    },
+    {
+      "id": "scene-origami",
+      "label": "Origami Warna",
+      "group": "Ilustrasi",
+      "colors": [
+        "#faf1ce",
+        "#ebbea6"
+      ],
+      "art": "/templates/scene-origami.svg"
+    },
+    {
+      "id": "scene-checker",
+      "label": "Papan Catur",
+      "group": "Ilustrasi",
+      "colors": [
+        "#222325",
+        "#f7e1c2"
+      ],
+      "art": "/templates/scene-checker.svg"
+    },
+    {
+      "id": "scene-autumn",
+      "label": "Gugur Amber",
+      "group": "Ilustrasi",
+      "colors": [
+        "#f3bb72",
+        "#9b493b"
+      ],
+      "art": "/templates/scene-autumn.svg"
+    },
+    {
+      "id": "scene-spaceport",
+      "label": "Stasiun Orbit",
+      "group": "Ilustrasi",
+      "colors": [
+        "#0c1537",
+        "#3e326b"
+      ],
+      "art": "/templates/scene-spaceport.svg"
+    },
+    {
+      "id": "scene-sakura",
+      "label": "Langit Sakura",
+      "group": "Ilustrasi",
+      "colors": [
+        "#f2b3ca",
+        "#f8ded6"
+      ],
+      "art": "/templates/scene-sakura.svg"
+    },
+    {
+      "id": "scene-snowy-pines",
+      "label": "Pinus Bersalju",
+      "group": "Ilustrasi",
+      "colors": [
+        "#abcad6",
+        "#dfeaf4"
+      ],
+      "art": "/templates/scene-snowy-pines.svg"
+    },
+    {
+      "id": "scene-orchid",
+      "label": "Rumah Anggrek",
+      "group": "Ilustrasi",
+      "colors": [
+        "#e7abc6",
+        "#925aa3"
+      ],
+      "art": "/templates/scene-orchid.svg"
+    },
+    {
+      "id": "scene-jazz",
+      "label": "Jazz Klub",
+      "group": "Ilustrasi",
+      "colors": [
+        "#e7c158",
+        "#9d5527"
+      ],
+      "art": "/templates/scene-jazz.svg"
+    },
+    {
+      "id": "scene-museum",
+      "label": "Dinding Galeri",
+      "group": "Ilustrasi",
+      "colors": [
+        "#d4c0a6",
+        "#e9e0cf"
+      ],
+      "art": "/templates/scene-museum.svg"
+    },
+    {
+      "id": "scene-cloud-nine",
+      "label": "Awan Krim",
+      "group": "Ilustrasi",
+      "colors": [
+        "#a3c3e8",
+        "#f6dce6"
+      ],
+      "art": "/templates/scene-cloud-nine.svg"
+    },
+    {
+      "id": "scene-moon-garden",
+      "label": "Kebun Bulan",
+      "group": "Ilustrasi",
+      "colors": [
+        "#1f3b41",
+        "#386c64"
+      ],
+      "art": "/templates/scene-moon-garden.svg"
+    },
+    {
+      "id": "scene-gingham",
+      "label": "Kotak Stroberi",
+      "group": "Ilustrasi",
+      "colors": [
+        "#f9d6d6",
+        "#ee97a4"
+      ],
+      "art": "/templates/scene-gingham.svg"
+    },
+    {
+      "id": "scene-neon-road",
+      "label": "Jalan Neon",
+      "group": "Ilustrasi",
+      "colors": [
+        "#1b1143",
+        "#662b90"
+      ],
+      "art": "/templates/scene-neon-road.svg"
+    },
+    {
+      "id": "scene-paper-kites",
+      "label": "Layang Kertas",
+      "group": "Ilustrasi",
+      "colors": [
+        "#d9eff6",
+        "#7eb4c2"
+      ],
+      "art": "/templates/scene-paper-kites.svg"
+    },
+    {
+      "id": "scene-velvet-stage",
+      "label": "Panggung Beludru",
+      "group": "Ilustrasi",
+      "colors": [
+        "#310f2b",
+        "#9d2352"
+      ],
+      "art": "/templates/scene-velvet-stage.svg"
+    },
+    {
+      "id": "scene-mint-grid",
+      "label": "Ubin Mint",
+      "group": "Ilustrasi",
+      "colors": [
+        "#d2f1df",
+        "#67b8a5"
+      ],
+      "art": "/templates/scene-mint-grid.svg"
+    },
+    {
+      "id": "scene-citrus",
+      "label": "Pasar Jeruk",
+      "group": "Ilustrasi",
+      "colors": [
+        "#ffe78b",
+        "#f4a43f"
+      ],
+      "art": "/templates/scene-citrus.svg"
+    },
+    {
+      "id": "scene-poolside",
+      "label": "Kolam Retro",
+      "group": "Ilustrasi",
+      "colors": [
+        "#79e0dc",
+        "#197795"
+      ],
+      "art": "/templates/scene-poolside.svg"
+    },
+    {
+      "id": "scene-dune-sun",
+      "label": "Gumuk Matahari",
+      "group": "Ilustrasi",
+      "colors": [
+        "#efad6d",
+        "#a95141"
+      ],
+      "art": "/templates/scene-dune-sun.svg"
+    },
+    {
+      "id": "scene-blue-hour",
+      "label": "Jam Biru",
+      "group": "Ilustrasi",
+      "colors": [
+        "#11234e",
+        "#708bc5"
+      ],
+      "art": "/templates/scene-blue-hour.svg"
+    },
+    {
+      "id": "scene-peach-arches",
+      "label": "Lengkung Persik",
+      "group": "Ilustrasi",
+      "colors": [
+        "#f5b58f",
+        "#bc4f5c"
+      ],
+      "art": "/templates/scene-peach-arches.svg"
+    },
+    {
+      "id": "solid-putih",
+      "label": "Putih Studio",
+      "group": "Polos",
+      "colors": [
+        "#ffffff",
+        "#ffffff"
+      ]
+    },
+    {
+      "id": "solid-gading",
+      "label": "Gading",
+      "group": "Polos",
+      "colors": [
+        "#fffaec",
+        "#fffaec"
+      ]
+    },
+    {
+      "id": "solid-krem",
+      "label": "Krem Susu",
+      "group": "Polos",
+      "colors": [
+        "#f2e3c8",
+        "#f2e3c8"
+      ]
+    },
+    {
+      "id": "solid-abu",
+      "label": "Abu Mist",
+      "group": "Polos",
+      "colors": [
+        "#e0e4e9",
+        "#e0e4e9"
+      ]
+    },
+    {
+      "id": "solid-arang",
+      "label": "Abu Arang",
+      "group": "Polos",
+      "colors": [
+        "#363b47",
+        "#363b47"
+      ]
+    },
+    {
+      "id": "solid-hitam",
+      "label": "Hitam Pekat",
+      "group": "Polos",
+      "colors": [
+        "#151519",
+        "#151519"
+      ]
+    },
+    {
+      "id": "solid-navy",
+      "label": "Biru Navy",
+      "group": "Polos",
+      "colors": [
+        "#202f56",
+        "#202f56"
+      ]
+    },
+    {
+      "id": "solid-kobalt",
+      "label": "Biru Kobalt",
+      "group": "Polos",
+      "colors": [
+        "#3c5fca",
+        "#3c5fca"
+      ]
+    },
+    {
+      "id": "solid-aqua",
+      "label": "Aqua",
+      "group": "Polos",
+      "colors": [
+        "#8bdcde",
+        "#8bdcde"
+      ]
+    },
+    {
+      "id": "solid-mint",
+      "label": "Hijau Mint",
+      "group": "Polos",
+      "colors": [
+        "#bfebd8",
+        "#bfebd8"
+      ]
+    },
+    {
+      "id": "solid-zaitun",
+      "label": "Hijau Zaitun",
+      "group": "Polos",
+      "colors": [
+        "#898958",
+        "#898958"
+      ]
+    },
+    {
+      "id": "solid-zamrud",
+      "label": "Hijau Zamrud",
+      "group": "Polos",
+      "colors": [
+        "#217a62",
+        "#217a62"
+      ]
+    },
+    {
+      "id": "solid-lemon",
+      "label": "Kuning Lemon",
+      "group": "Polos",
+      "colors": [
+        "#ffe991",
+        "#ffe991"
+      ]
+    },
+    {
+      "id": "solid-madu",
+      "label": "Kuning Madu",
+      "group": "Polos",
+      "colors": [
+        "#edb540",
+        "#edb540"
+      ]
+    },
+    {
+      "id": "solid-persik",
+      "label": "Persik",
+      "group": "Polos",
+      "colors": [
+        "#fac0a5",
+        "#fac0a5"
+      ]
+    },
+    {
+      "id": "solid-koral",
+      "label": "Koral",
+      "group": "Polos",
+      "colors": [
+        "#ed816e",
+        "#ed816e"
+      ]
+    },
+    {
+      "id": "solid-merah",
+      "label": "Merah Ceri",
+      "group": "Polos",
+      "colors": [
+        "#b72c48",
+        "#b72c48"
+      ]
+    },
+    {
+      "id": "solid-anggur",
+      "label": "Merah Anggur",
+      "group": "Polos",
+      "colors": [
+        "#71334d",
+        "#71334d"
+      ]
+    },
+    {
+      "id": "solid-blush",
+      "label": "Pink Blush",
+      "group": "Polos",
+      "colors": [
+        "#f5c9d8",
+        "#f5c9d8"
+      ]
+    },
+    {
+      "id": "solid-fuchsia",
+      "label": "Fuchsia",
+      "group": "Polos",
+      "colors": [
+        "#c94686",
+        "#c94686"
+      ]
+    },
+    {
+      "id": "solid-periwinkle",
+      "label": "Periwinkle",
+      "group": "Polos",
+      "colors": [
+        "#9ea9ef",
+        "#9ea9ef"
+      ]
+    },
+    {
+      "id": "solid-plum",
+      "label": "Ungu Plum",
+      "group": "Polos",
+      "colors": [
+        "#613b75",
+        "#613b75"
+      ]
+    },
+    {
+      "id": "solid-kakao",
+      "label": "Kakao",
+      "group": "Polos",
+      "colors": [
+        "#775044",
+        "#775044"
+      ]
+    },
+    {
+      "id": "solid-terakota",
+      "label": "Terakota",
+      "group": "Polos",
+      "colors": [
+        "#bf674e",
+        "#bf674e"
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "id": "none",
+      "label": "None",
+      "group": "",
+      "paper": "#fdf5e8",
+      "ink": "#822c47",
+      "border": "#fdf5e8"
+    },
+    {
+      "id": "paper",
+      "label": "Mawar Rubi",
+      "group": "Romantis",
+      "paper": "#f6e5e2",
+      "ink": "#6d2434",
+      "border": "#be7e73",
+      "art": "/templates/frames/paper.webp"
+    },
+    {
+      "id": "istana-gading",
+      "label": "Gerbang Istana Gading",
+      "group": "Istana & Klasik",
+      "paper": "#fcf4e6",
+      "ink": "#66472d",
+      "border": "#d7b07c",
+      "art": "/templates/frames/istana-gading.webp"
+    },
+    {
+      "id": "love",
+      "label": "Surat Cinta Beludru",
+      "group": "Romantis",
+      "paper": "#f8e2e9",
+      "ink": "#881c43",
+      "border": "#c77f9a",
+      "art": "/templates/frames/love.webp"
+    },
+    {
+      "id": "pita-pop",
+      "label": "Pita Pop Studio",
+      "group": "Modern",
+      "paper": "#fff1e5",
+      "ink": "#441944",
+      "border": "#da5177",
+      "art": "/templates/frames/pita-pop.webp"
+    },
+    {
+      "id": "frame-mawar-merah",
+      "label": "Mawar Merah",
+      "group": "Romantis",
+      "paper": "#f8e3e9",
+      "ink": "#7b2041",
+      "border": "#d18da2",
+      "art": "/templates/frames/frame-mawar-merah.webp"
+    },
+    {
+      "id": "frame-beludru-hati",
+      "label": "Hati Beludru",
+      "group": "Romantis",
+      "paper": "#f8e3e9",
+      "ink": "#7b2041",
+      "border": "#d18da2",
+      "art": "/templates/frames/frame-beludru-hati.webp"
+    },
+    {
+      "id": "frame-hati-aquarel",
+      "label": "Hati Aquarel",
+      "group": "Romantis",
+      "paper": "#f8e3e9",
+      "ink": "#7b2041",
+      "border": "#d18da2",
+      "art": "/templates/frames/frame-hati-aquarel.webp"
+    },
+    {
+      "id": "frame-permen-hati",
+      "label": "Permen Hati",
+      "group": "Romantis",
+      "paper": "#f8e3e9",
+      "ink": "#7b2041",
+      "border": "#d18da2",
+      "art": "/templates/frames/frame-permen-hati.webp"
+    },
+    {
+      "id": "frame-barok-emas",
+      "label": "Ukiran Barok Emas",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-barok-emas.webp"
+    },
+    {
+      "id": "frame-rococo-gading",
+      "label": "Rococo Gading",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-rococo-gading.webp"
+    },
+    {
+      "id": "frame-perunggu-patung",
+      "label": "Relief Perunggu",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-perunggu-patung.webp"
+    },
+    {
+      "id": "frame-oval-laurel",
+      "label": "Oval Laurel Emas",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-oval-laurel.webp"
+    },
+    {
+      "id": "frame-gapura-gotik",
+      "label": "Gapura Gotik",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-gapura-gotik.webp"
+    },
+    {
+      "id": "frame-sulur-zamrud",
+      "label": "Sulur Zamrud",
+      "group": "Botani",
+      "paper": "#e6efdc",
+      "ink": "#334f35",
+      "border": "#899c67",
+      "art": "/templates/frames/frame-sulur-zamrud.webp"
+    },
+    {
+      "id": "frame-anggrek-putih",
+      "label": "Anggrek Putih",
+      "group": "Botani",
+      "paper": "#e6efdc",
+      "ink": "#334f35",
+      "border": "#899c67",
+      "art": "/templates/frames/frame-anggrek-putih.webp"
+    },
+    {
+      "id": "frame-hutan-jamur",
+      "label": "Pakis dan Jamur",
+      "group": "Botani",
+      "paper": "#e6efdc",
+      "ink": "#334f35",
+      "border": "#899c67",
+      "art": "/templates/frames/frame-hutan-jamur.webp"
+    },
+    {
+      "id": "frame-hortensia",
+      "label": "Hortensia Biru",
+      "group": "Botani",
+      "paper": "#e6efdc",
+      "ink": "#334f35",
+      "border": "#899c67",
+      "art": "/templates/frames/frame-hortensia.webp"
+    },
+    {
+      "id": "frame-scrapbook",
+      "label": "Scrapbook Bunga",
+      "group": "Modern",
+      "paper": "#faf0e4",
+      "ink": "#573b33",
+      "border": "#d39067",
+      "art": "/templates/frames/frame-scrapbook.webp"
+    },
+    {
+      "id": "frame-sapuan-dua-warna",
+      "label": "Sapuan Nila dan Koral",
+      "group": "Modern",
+      "paper": "#faf0e4",
+      "ink": "#573b33",
+      "border": "#d39067",
+      "art": "/templates/frames/frame-sapuan-dua-warna.webp"
+    },
+    {
+      "id": "frame-rol-sinema",
+      "label": "Rol Sinema",
+      "group": "Modern",
+      "paper": "#faf0e4",
+      "ink": "#573b33",
+      "border": "#d39067",
+      "art": "/templates/frames/frame-rol-sinema.webp"
+    },
+    {
+      "id": "frame-kipas-deco",
+      "label": "Kipas Art Deco",
+      "group": "Modern",
+      "paper": "#faf0e4",
+      "ink": "#573b33",
+      "border": "#d39067",
+      "art": "/templates/frames/frame-kipas-deco.webp"
+    },
+    {
+      "id": "frame-zigzag",
+      "label": "Zigzag Jingga",
+      "group": "Modern",
+      "paper": "#faf0e4",
+      "ink": "#573b33",
+      "border": "#d39067",
+      "art": "/templates/frames/frame-zigzag.webp"
+    },
+    {
+      "id": "frame-tabung-neon",
+      "label": "Tabung Neon Biru",
+      "group": "Modern",
+      "paper": "#251d3b",
+      "ink": "#f9d8f2",
+      "border": "#8b6ac2",
+      "art": "/templates/frames/frame-tabung-neon.webp"
+    },
+    {
+      "id": "frame-tinta-magenta",
+      "label": "Percikan Magenta",
+      "group": "Modern",
+      "paper": "#251d3b",
+      "ink": "#f9d8f2",
+      "border": "#8b6ac2",
+      "art": "/templates/frames/frame-tinta-magenta.webp"
+    },
+    {
+      "id": "frame-gelembung-prisma",
+      "label": "Gelembung Prisma",
+      "group": "Modern",
+      "paper": "#251d3b",
+      "ink": "#f9d8f2",
+      "border": "#8b6ac2",
+      "art": "/templates/frames/frame-gelembung-prisma.webp"
+    },
+    {
+      "id": "frame-memphis",
+      "label": "Kolase Memphis",
+      "group": "Modern",
+      "paper": "#251d3b",
+      "ink": "#f9d8f2",
+      "border": "#8b6ac2",
+      "art": "/templates/frames/frame-memphis.webp"
+    },
+    {
+      "id": "frame-sirkuit",
+      "label": "Sirkuit Neon",
+      "group": "Modern",
+      "paper": "#251d3b",
+      "ink": "#f9d8f2",
+      "border": "#8b6ac2",
+      "art": "/templates/frames/frame-sirkuit.webp"
+    },
+    {
+      "id": "frame-iris-nouveau",
+      "label": "Iris Art Nouveau",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-iris-nouveau.webp"
+    },
+    {
+      "id": "frame-perak-antik",
+      "label": "Oval Perak Antik",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-perak-antik.webp"
+    },
+    {
+      "id": "frame-mahkota-rubi",
+      "label": "Mahkota Rubi",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-mahkota-rubi.webp"
+    },
+    {
+      "id": "frame-mosaik-maroko",
+      "label": "Mosaik Maroko",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-mosaik-maroko.webp"
+    },
+    {
+      "id": "frame-untaian-mutiara",
+      "label": "Untaian Mutiara",
+      "group": "Istana & Klasik",
+      "paper": "#f5ead6",
+      "ink": "#65462d",
+      "border": "#be965b",
+      "art": "/templates/frames/frame-untaian-mutiara.webp"
+    },
+    {
+      "id": "frame-anyelir",
+      "label": "Anyelir dan Cincin",
+      "group": "Romantis",
+      "paper": "#f8e7e7",
+      "ink": "#75223d",
+      "border": "#cf8e9d",
+      "art": "/templates/frames/frame-anyelir.webp"
+    },
+    {
+      "id": "frame-renda-pengantin",
+      "label": "Renda Pengantin",
+      "group": "Romantis",
+      "paper": "#f8e7e7",
+      "ink": "#75223d",
+      "border": "#cf8e9d",
+      "art": "/templates/frames/frame-renda-pengantin.webp"
+    },
+    {
+      "id": "frame-peoni",
+      "label": "Peoni Koral",
+      "group": "Romantis",
+      "paper": "#f8e7e7",
+      "ink": "#75223d",
+      "border": "#cf8e9d",
+      "art": "/templates/frames/frame-peoni.webp"
+    },
+    {
+      "id": "frame-pita-sutra",
+      "label": "Pita Sutra Gading",
+      "group": "Romantis",
+      "paper": "#f8e7e7",
+      "ink": "#75223d",
+      "border": "#cf8e9d",
+      "art": "/templates/frames/frame-pita-sutra.webp"
+    },
+    {
+      "id": "frame-lipatan-hati",
+      "label": "Lipatan Hati",
+      "group": "Romantis",
+      "paper": "#f8e7e7",
+      "ink": "#75223d",
+      "border": "#cf8e9d",
+      "art": "/templates/frames/frame-lipatan-hati.webp"
+    },
+    {
+      "id": "frame-kembang-sepatu",
+      "label": "Kembang Sepatu Tropis",
+      "group": "Botani",
+      "paper": "#f1eed8",
+      "ink": "#445329",
+      "border": "#b7a364",
+      "art": "/templates/frames/frame-kembang-sepatu.webp"
+    },
+    {
+      "id": "frame-kebun-jeruk",
+      "label": "Kebun Jeruk",
+      "group": "Botani",
+      "paper": "#f1eed8",
+      "ink": "#445329",
+      "border": "#b7a364",
+      "art": "/templates/frames/frame-kebun-jeruk.webp"
+    },
+    {
+      "id": "frame-piknik-stroberi",
+      "label": "Piknik Stroberi",
+      "group": "Botani",
+      "paper": "#f1eed8",
+      "ink": "#445329",
+      "border": "#b7a364",
+      "art": "/templates/frames/frame-piknik-stroberi.webp"
+    },
+    {
+      "id": "frame-bunga-matahari",
+      "label": "Bunga Matahari",
+      "group": "Botani",
+      "paper": "#f1eed8",
+      "ink": "#445329",
+      "border": "#b7a364",
+      "art": "/templates/frames/frame-bunga-matahari.webp"
+    },
+    {
+      "id": "frame-kerang-pasir",
+      "label": "Kerang dan Pasir",
+      "group": "Botani",
+      "paper": "#f1eed8",
+      "ink": "#445329",
+      "border": "#b7a364",
+      "art": "/templates/frames/frame-kerang-pasir.webp"
+    },
+    {
+      "id": "frame-bulan-bintang",
+      "label": "Bulan dan Rasi Bintang",
+      "group": "Perayaan",
+      "paper": "#e9e3f6",
+      "ink": "#49355d",
+      "border": "#9f8ac9",
+      "art": "/templates/frames/frame-bulan-bintang.webp"
+    },
+    {
+      "id": "frame-aurora",
+      "label": "Aurora Hutan",
+      "group": "Perayaan",
+      "paper": "#e9e3f6",
+      "ink": "#49355d",
+      "border": "#9f8ac9",
+      "art": "/templates/frames/frame-aurora.webp"
+    },
+    {
+      "id": "frame-serpentin",
+      "label": "Serpentin Festival",
+      "group": "Perayaan",
+      "paper": "#e9e3f6",
+      "ink": "#49355d",
+      "border": "#9f8ac9",
+      "art": "/templates/frames/frame-serpentin.webp"
+    },
+    {
+      "id": "frame-pita-perayaan",
+      "label": "Pita Emas Perayaan",
+      "group": "Perayaan",
+      "paper": "#e9e3f6",
+      "ink": "#49355d",
+      "border": "#9f8ac9",
+      "art": "/templates/frames/frame-pita-perayaan.webp"
+    },
+    {
+      "id": "frame-kristal-es",
+      "label": "Kristal Es",
+      "group": "Perayaan",
+      "paper": "#e9e3f6",
+      "ink": "#49355d",
+      "border": "#9f8ac9",
+      "art": "/templates/frames/frame-kristal-es.webp"
+    },
+    {
+      "id": "frame-grafiti",
+      "label": "Grafiti Halftone",
+      "group": "Modern",
+      "paper": "#f8eadf",
+      "ink": "#5b2646",
+      "border": "#b97591",
+      "art": "/templates/frames/frame-grafiti.webp"
+    },
+    {
+      "id": "film",
+      "label": "Negatif Film dan Selotip",
+      "group": "Modern",
+      "paper": "#f8eadf",
+      "ink": "#5b2646",
+      "border": "#b97591",
+      "art": "/templates/frames/film.webp"
+    },
+    {
+      "id": "frame-kolase-kubis",
+      "label": "Kolase Kubisme",
+      "group": "Modern",
+      "paper": "#f8eadf",
+      "ink": "#5b2646",
+      "border": "#b97591",
+      "art": "/templates/frames/frame-kolase-kubis.webp"
+    },
+    {
+      "id": "frame-komik",
+      "label": "Ledakan Komik",
+      "group": "Modern",
+      "paper": "#f8eadf",
+      "ink": "#5b2646",
+      "border": "#b97591",
+      "art": "/templates/frames/frame-komik.webp"
+    },
+    {
+      "id": "frame-krom-ametis",
+      "label": "Krom Ametis",
+      "group": "Modern",
+      "paper": "#f8eadf",
+      "ink": "#5b2646",
+      "border": "#b97591",
+      "art": "/templates/frames/frame-krom-ametis.webp"
+    },
+    {
+      "id": "plain-kertas-gading",
+      "label": "Kertas Gading",
+      "group": "Polos",
+      "paper": "#fdf3d8",
+      "ink": "#b6a079",
+      "border": "#e4d3a9",
+      "art": "/templates/illustrated/plain-kertas-gading.svg"
+    },
+    {
+      "id": "plain-hitam-tipis",
+      "label": "Hitam Tipis",
+      "group": "Polos",
+      "paper": "#221f28",
+      "ink": "#faf2f9",
+      "border": "#252128",
+      "art": "/templates/illustrated/plain-hitam-tipis.svg"
+    },
+    {
+      "id": "plain-putih-sudut",
+      "label": "Sudut Putih",
+      "group": "Polos",
+      "paper": "#f6f7fc",
+      "ink": "#3b435e",
+      "border": "#fff",
+      "art": "/templates/illustrated/plain-putih-sudut.svg"
+    },
+    {
+      "id": "plain-garis-rose",
+      "label": "Garis Rose",
+      "group": "Polos",
+      "paper": "#f9e1ed",
+      "ink": "#853c62",
+      "border": "#b74774",
+      "art": "/templates/illustrated/plain-garis-rose.svg"
+    },
+    {
+      "id": "plain-blok-kobalt",
+      "label": "Blok Kobalt",
+      "group": "Polos",
+      "paper": "#e7edff",
+      "ink": "#273d88",
+      "border": "#3b56b7",
+      "art": "/templates/illustrated/plain-blok-kobalt.svg"
+    },
+    {
+      "id": "plain-tepi-mint",
+      "label": "Tepi Mint",
+      "group": "Polos",
+      "paper": "#d8f4e6",
+      "ink": "#286952",
+      "border": "#4aa58c",
+      "art": "/templates/illustrated/plain-tepi-mint.svg"
+    },
+    {
+      "id": "plain-pinggir-merah",
+      "label": "Garis Ceri",
+      "group": "Polos",
+      "paper": "#f8e4df",
+      "ink": "#7f243e",
+      "border": "#c53851",
+      "art": "/templates/illustrated/plain-pinggir-merah.svg"
+    },
+    {
+      "id": "plain-garis-periwinkle",
+      "label": "Garis Periwinkle",
+      "group": "Polos",
+      "paper": "#ebedff",
+      "ink": "#4751a2",
+      "border": "#797bc8",
+      "art": "/templates/illustrated/plain-garis-periwinkle.svg"
+    },
+    {
+      "id": "plain-matte-cokelat",
+      "label": "Matte Kakao",
+      "group": "Polos",
+      "paper": "#efe1d5",
+      "ink": "#60392c",
+      "border": "#895846",
+      "art": "/templates/illustrated/plain-matte-cokelat.svg"
+    },
+    {
+      "id": "plain-bingkai-kuning",
+      "label": "Bingkai Kuning",
+      "group": "Polos",
+      "paper": "#fdf3cb",
+      "ink": "#624915",
+      "border": "#e4b644",
+      "art": "/templates/illustrated/plain-bingkai-kuning.svg"
+    },
+    {
+      "id": "plain-biru-es",
+      "label": "Biru Es",
+      "group": "Polos",
+      "paper": "#e1f6fc",
+      "ink": "#24627b",
+      "border": "#76bed9",
+      "art": "/templates/illustrated/plain-biru-es.svg"
+    },
+    {
+      "id": "plain-tab-ungu",
+      "label": "Tab Ungu",
+      "group": "Polos",
+      "paper": "#f0e5f7",
+      "ink": "#603379",
+      "border": "#9465b6",
+      "art": "/templates/illustrated/plain-tab-ungu.svg"
+    },
+    {
+      "id": "cartoon-hati",
+      "label": "Hati Doodle",
+      "group": "Kartun",
+      "paper": "#ffe4ec",
+      "ink": "#9a295d",
+      "border": "#f8739e",
+      "art": "/templates/illustrated/cartoon-hati.svg"
+    },
+    {
+      "id": "cartoon-bintang",
+      "label": "Bintang Ceria",
+      "group": "Kartun",
+      "paper": "#fff5d4",
+      "ink": "#614516",
+      "border": "#ffcd44",
+      "art": "/templates/illustrated/cartoon-bintang.svg"
+    },
+    {
+      "id": "cartoon-bunga",
+      "label": "Bunga Pop",
+      "group": "Kartun",
+      "paper": "#fff0e6",
+      "ink": "#8d3b5a",
+      "border": "#ffa3bb",
+      "art": "/templates/illustrated/cartoon-bunga.svg"
+    },
+    {
+      "id": "cartoon-stroberi",
+      "label": "Stroberi Lucu",
+      "group": "Kartun",
+      "paper": "#fff0e6",
+      "ink": "#9e3545",
+      "border": "#ef6679",
+      "art": "/templates/illustrated/cartoon-stroberi.svg"
+    },
+    {
+      "id": "cartoon-awan",
+      "label": "Awan Kapas",
+      "group": "Kartun",
+      "paper": "#ebf7ff",
+      "ink": "#3f6e95",
+      "border": "#f6fbff",
+      "art": "/templates/illustrated/cartoon-awan.svg"
+    },
+    {
+      "id": "cartoon-ceri",
+      "label": "Ceri Kembar",
+      "group": "Kartun",
+      "paper": "#fff3e8",
+      "ink": "#952c55",
+      "border": "#ef5378",
+      "art": "/templates/illustrated/cartoon-ceri.svg"
+    },
+    {
+      "id": "cartoon-hantu",
+      "label": "Hantu Imut",
+      "group": "Kartun",
+      "paper": "#f2eaff",
+      "ink": "#5d499c",
+      "border": "#fff5ff",
+      "art": "/templates/illustrated/cartoon-hantu.svg"
+    },
+    {
+      "id": "cartoon-kucing",
+      "label": "Kucing Kecil",
+      "group": "Kartun",
+      "paper": "#fff0e4",
+      "ink": "#8b4937",
+      "border": "#ffc989",
+      "art": "/templates/illustrated/cartoon-kucing.svg"
+    },
+    {
+      "id": "cartoon-pelangi",
+      "label": "Pelangi Mini",
+      "group": "Kartun",
+      "paper": "#eefbf6",
+      "ink": "#426f78",
+      "border": "#f68eb2",
+      "art": "/templates/illustrated/cartoon-pelangi.svg"
+    },
+    {
+      "id": "cartoon-pita",
+      "label": "Pita Manis",
+      "group": "Kartun",
+      "paper": "#fce9f0",
+      "ink": "#8d356e",
+      "border": "#f58cb5",
+      "art": "/templates/illustrated/cartoon-pita.svg"
+    },
+    {
+      "id": "cartoon-planet",
+      "label": "Planet Kecil",
+      "group": "Kartun",
+      "paper": "#efecff",
+      "ink": "#4e457e",
+      "border": "#a39ced",
+      "art": "/templates/illustrated/cartoon-planet.svg"
+    },
+    {
+      "id": "cartoon-ikan",
+      "label": "Ikan Gelembung",
+      "group": "Kartun",
+      "paper": "#e3fbf7",
+      "ink": "#236977",
+      "border": "#6bd0ce",
+      "art": "/templates/illustrated/cartoon-ikan.svg"
+    },
+    {
+      "id": "cartoon-permen",
+      "label": "Permen Pita",
+      "group": "Kartun",
+      "paper": "#fff2e9",
+      "ink": "#8b3b5d",
+      "border": "#da80ce",
+      "art": "/templates/illustrated/cartoon-permen.svg"
+    },
+    {
+      "id": "cartoon-daun",
+      "label": "Daun Doodle",
+      "group": "Kartun",
+      "paper": "#eef9e2",
+      "ink": "#416345",
+      "border": "#8cc47b",
+      "art": "/templates/illustrated/cartoon-daun.svg"
+    }
+  ]
+}

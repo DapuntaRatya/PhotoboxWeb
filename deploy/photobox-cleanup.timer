@@ -1,0 +1,10 @@
+[Unit]
+Description=Run PhotoboxWeb cleanup every minute
+
+[Timer]
+OnCalendar=minutely
+Persistent=true
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

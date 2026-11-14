@@ -1,0 +1,18 @@
+[Unit]
+Description=Remove expired PhotoboxWeb exports
+
+[Service]
+Type=oneshot
+User=photobox
+Group=photobox
+WorkingDirectory=/opt/photoboxweb
+StateDirectory=photoboxweb
+StateDirectoryMode=0700
+UMask=0077
+Environment=PHOTOBOX_DATA=/var/lib/photoboxweb
+EnvironmentFile=/etc/photoboxweb.env
+ExecStart=/usr/bin/node /opt/photoboxweb/server/storage.mjs
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true

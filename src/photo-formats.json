@@ -1,0 +1,25 @@
+{
+  "ratios": {
+    "1:1": [1, 1],
+    "2:3": [2, 3],
+    "3:2": [3, 2],
+    "3:4": [3, 4],
+    "4:3": [4, 3],
+    "4:5": [4, 5],
+    "5:4": [5, 4],
+    "9:16": [9, 16],
+    "16:9": [16, 9]
+  },
+  "strips": {
+    "1x2": { "rows": 1, "columns": 2, "count": 2 },
+    "2x1": { "rows": 2, "columns": 1, "count": 2 },
+    "4x1": { "rows": 4, "columns": 1, "count": 4 },
+    "2x2": { "rows": 2, "columns": 2, "count": 4 },
+    "2x3": { "rows": 2, "columns": 3, "count": 6 },
+    "3x2": { "rows": 3, "columns": 2, "count": 6 },
+    "2x4": { "rows": 2, "columns": 4, "count": 8 },
+    "4x2": { "rows": 4, "columns": 2, "count": 8 }
+  },
+  "defaultStrip": "4x1",
+  "legacyStrips": { "4": "4x1", "6": "3x2", "8": "4x2" }
+}

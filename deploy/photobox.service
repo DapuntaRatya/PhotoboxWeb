@@ -1,0 +1,24 @@
+[Unit]
+Description=PhotoboxWeb API and WebSocket signaling
+After=network.target
+
+[Service]
+Type=simple
+User=photobox
+Group=photobox
+WorkingDirectory=/opt/photoboxweb
+StateDirectory=photoboxweb
+StateDirectoryMode=0700
+UMask=0077
+Environment=PHOTOBOX_DATA=/var/lib/photoboxweb
+Environment=PHOTOBOX_EXTERNAL_CLEANUP=1
+EnvironmentFile=/etc/photoboxweb.env
+ExecStart=/usr/bin/node /opt/photoboxweb/server/index.mjs
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

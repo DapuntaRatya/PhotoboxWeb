@@ -1,0 +1,39 @@
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+*.env
+*.env.*
+!*.env.example
+!.env.example
+.npmrc
+*.key
+*.pem
+*.crt
+*.cer
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Runtime state and private photos
+/data/
+/exports/
+*.sqlite*
+*.db
+*.db-shm
+*.db-wal
+
+# Local editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
