@@ -2,6 +2,7 @@ import { FilesetResolver, ImageSegmenter, type NormalizedLandmark } from '@media
 import { LiveMaskFilter } from './live-mask';
 import { restoreHandMask } from './hand-mask';
 import type { BackgroundRemover } from '@katana-video/web-bg-removal';
+import { appPath } from './paths';
 
 const filter = new LiveMaskFilter();
 const input = new OffscreenCanvas(1, 1);
@@ -9,10 +10,10 @@ const inputContext = input.getContext('2d', { willReadFrequently: true })!;
 let portrait: BackgroundRemover | undefined;
 let segmenter: Promise<ImageSegmenter> | undefined;
 let lastPortraitFrame = -Infinity;
-const initializeFallback = () => FilesetResolver.forVisionTasks(new URL('/vision', location.origin).href, true)
+const initializeFallback = () => FilesetResolver.forVisionTasks(new URL(appPath('vision'), location.origin).href, true)
   .then((files) => ImageSegmenter.createFromOptions(files, {
     canvas: new OffscreenCanvas(1, 1),
-    baseOptions: { modelAssetPath: new URL('/vision/person.tflite', location.origin).href, delegate: 'CPU' },
+    baseOptions: { modelAssetPath: new URL(appPath('vision/person.tflite'), location.origin).href, delegate: 'CPU' },
     runningMode: 'VIDEO', outputCategoryMask: false, outputConfidenceMasks: true,
   }));
 
@@ -50,7 +51,7 @@ async function initialize() {
     if (typeof VideoFrame !== 'undefined' && adapter && !adapter.info.isFallbackAdapter && adapter.features.has('shader-f16')) {
       const { BackgroundRemover } = await import('@katana-video/web-bg-removal');
       portrait = await BackgroundRemover.load('longpipe-large', {
-        backend: 'webgpu', dtype: 'f16', weightsBaseUrl: new URL('/vision/', location.origin).href,
+        backend: 'webgpu', dtype: 'f16', weightsBaseUrl: new URL(appPath('vision/'), location.origin).href,
       });
     }
   } catch {

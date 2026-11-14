@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 
-const base = process.env.PHOTOBOX_TEST_URL || 'http://127.0.0.1:5173';
+const base = (process.env.PHOTOBOX_TEST_URL || 'http://127.0.0.1:5173').replace(/\/$/, '');
 const temp = await mkdtemp(join(tmpdir(), 'photobox-camera-'));
 const fixture = join(temp, 'camera.y4m');
 const width = 640, height = 480;
@@ -71,7 +71,7 @@ try {
   }
   await pageA.getByRole('button', { name: 'Buat room baru' }).click();
   await pageA.getByRole('heading', { name: 'Photo Studio' }).waitFor();
-  session = await pageA.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/')[2]}`)));
+  session = await pageA.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/').at(-1)}`)));
   await pageA.getByRole('button', { name: 'Aktifkan kamera dan mikrofon' }).click();
   await pageA.getByRole('button', { name: 'Ambil foto 1' }).click();
   await pageA.getByRole('button', { name: 'Slot 1, terisi' }).locator('img').waitFor({ timeout: 45_000 });
@@ -83,11 +83,11 @@ try {
   await pageB.goto(invite);
   await pageB.getByRole('button', { name: 'Gabung room' }).click();
   await pageB.getByRole('heading', { name: 'Photo Studio' }).waitFor();
-  peerSession = await pageB.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/')[2]}`)));
+  peerSession = await pageB.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/').at(-1)}`)));
   await pageC.goto(invite);
   await pageC.getByRole('button', { name: 'Gabung room' }).click();
   await pageC.getByRole('heading', { name: 'Photo Studio' }).waitFor();
-  thirdSession = await pageC.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/')[2]}`)));
+  thirdSession = await pageC.evaluate(() => JSON.parse(sessionStorage.getItem(`photobox:session:${location.pathname.split('/').at(-1)}`)));
   await Promise.all([pageB, pageC].map(async (page) => {
     await page.getByRole('button', { name: 'Nyalakan kamera' }).click();
     await page.getByRole('button', { name: 'Nyalakan mikrofon' }).click();

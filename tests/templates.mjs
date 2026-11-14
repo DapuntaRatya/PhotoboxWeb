@@ -2,11 +2,11 @@ import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import catalog from '../src/template-catalog.json' with { type: 'json' };
 
-const base = process.env.PHOTOBOX_TEST_URL || 'http://127.0.0.1:5173';
+const base = (process.env.PHOTOBOX_TEST_URL || 'http://127.0.0.1:5173').replace(/\/$/, '');
 const browser = await chromium.launch({ channel: process.env.PHOTOBOX_TEST_BROWSER || 'chrome' });
 const [a, b] = await Promise.all(Array.from({ length: 2 }, () => browser.newPage({ ignoreHTTPSErrors: true })));
 const sessions = [];
-const session = (page) => page.evaluate(() => JSON.parse(sessionStorage.getItem('photobox:session:' + location.pathname.split('/')[2])));
+const session = (page) => page.evaluate(() => JSON.parse(sessionStorage.getItem('photobox:session:' + location.pathname.split('/').at(-1))));
 const waitLayout = (page, key, id) => page.waitForFunction(([field, value]) => window.roomLayout?.[field] === value, [key, id], { timeout: 8000 });
 const pixels = (page) => page.locator('.preview-frame canvas').evaluate((canvas) => canvas.toDataURL());
 const ready = (page) => page.getByText('Memuat latar dan bingkai…', { exact: true }).waitFor({ state: 'hidden' });
@@ -102,9 +102,9 @@ try {
   console.log('Asset retry, rapid changes, and rejoin after reload passed.');
 } finally {
   for (const item of sessions) {
-    await a.evaluate(async ({ roomId, credential }) => {
-      await fetch('/api/rooms/' + roomId + '/leave', { method: 'POST', headers: { Authorization: 'Bearer ' + credential } });
-    }, item).catch(() => {});
+    await fetch(`${base}/api/rooms/${item.roomId}/leave`, {
+      method: 'POST', headers: { Authorization: `Bearer ${item.credential}` },
+    }).catch(() => {});
   }
   await browser.close();
 }

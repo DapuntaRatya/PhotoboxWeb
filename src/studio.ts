@@ -5,6 +5,7 @@ import { loadTemplateArt } from './templates';
 import { Peer, type AssetKind, type Signal } from './peer';
 import { LiveMaskFilter, type LiveMask } from './live-mask';
 import { makeHandLandmarker, restoreHandMask } from './hand-mask';
+import { appPath } from './paths';
 import { api, linkId, mirrorKey, neutral, type Capture, type FilterKey, type Person, type RoomState, type Seat, type Session, type Slot } from './types';
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -127,7 +128,7 @@ export class Studio {
 
   private openSocket() {
     if (this.stopped) return;
-    const ws = this.ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`);
+    const ws = this.ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}${appPath('ws')}`);
     ws.onopen = () => {
       this.lastReady = '';
       this.send({ type: 'auth', roomId: this.session.roomId, credential: this.session.credential });

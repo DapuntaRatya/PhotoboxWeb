@@ -1,11 +1,12 @@
 import { FilesetResolver, HandLandmarker, type NormalizedLandmark } from '@mediapipe/tasks-vision';
 import type { LiveMask } from './live-mask';
+import { appPath } from './paths';
 
 export async function makeHandLandmarker(runningMode: 'VIDEO' | 'IMAGE', canvas?: OffscreenCanvas) {
-  const files = await FilesetResolver.forVisionTasks(new URL('/vision', location.origin).href, Boolean(canvas));
+  const files = await FilesetResolver.forVisionTasks(new URL(appPath('vision'), location.origin).href, Boolean(canvas));
   return HandLandmarker.createFromOptions(files, {
     canvas,
-    baseOptions: { modelAssetPath: '/vision/hand-landmarker.task', delegate: 'CPU' },
+    baseOptions: { modelAssetPath: appPath('vision/hand-landmarker.task'), delegate: 'CPU' },
     runningMode, numHands: 2, minHandDetectionConfidence: 0.6, minHandPresenceConfidence: 0.6,
   });
 }

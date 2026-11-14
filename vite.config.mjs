@@ -9,6 +9,7 @@ const files = readdirSync(wasm);
 const apiPort = process.env.PHOTOBOX_PORT || 8787;
 
 export default defineConfig(({ command, mode, isPreview }) => ({
+  base: process.env.PHOTOBOX_BASE_PATH || '/',
   plugins: [react(), {
     name: 'local-mediapipe-wasm',
     configureServer(server) {

@@ -8,6 +8,7 @@ import './style.css';
 import { Studio } from './studio';
 import { StripEditor, type StripDraft } from './strip-editor';
 import { TemplatePicker } from './template-picker';
+import { appPath, basePath } from './paths';
 import formats from './photo-formats.json';
 import { albumLink, api, canTakePhoto, filterNames, fullFrame, inviteLink, mirrorKey, neutral, sessionKey,
   type AlbumFile, type FilterKey, type Person, type RoomState, type Seat, type Session, type Version } from './types';
@@ -17,7 +18,7 @@ const isId = (id: string) => /^[a-f0-9]{32}$/.test(id);
 const isToken = (token: string) => /^[A-Za-z0-9_-]{43}$/.test(token);
 
 function Brand() {
-  return <a href="/" className="brand" aria-label="PhotoboxWeb, halaman awal"><span className="brand-mark"><Camera size={19} strokeWidth={2.1} /></span>
+  return <a href={basePath} className="brand" aria-label="PhotoboxWeb, halaman awal"><span className="brand-mark"><Camera size={19} strokeWidth={2.1} /></span>
     <span>photobox<span className="brand-accent">web</span><span className="brand-period">.</span></span></a>;
 }
 
@@ -55,7 +56,7 @@ function Home() {
     try {
       const session = await api<Session>('/rooms', undefined, { method: 'POST' });
       sessionStorage.setItem(sessionKey(session.roomId), JSON.stringify(session));
-      location.assign(`/room/${session.roomId}`);
+      location.assign(appPath(`room/${session.roomId}`));
     } catch (error) {
       setMessage(errorText(error));
       setBusy(false);
@@ -65,8 +66,8 @@ function Home() {
     event.preventDefault();
     try {
       const url = new URL(invite.trim(), location.origin);
-      const id = url.pathname.split('/')[2] ?? '';
-      if (url.origin !== location.origin || url.pathname !== `/room/${id}` || !isId(id) || !isToken(url.hash.slice(1))) throw Error();
+      const id = url.pathname.split('/').at(-1) ?? '';
+      if (url.origin !== location.origin || url.pathname !== appPath(`room/${id}`) || !isId(id) || !isToken(url.hash.slice(1))) throw Error();
       location.assign(url);
     } catch {
       setMessage('Masukkan tautan undangan PhotoboxWeb yang lengkap.');
@@ -135,7 +136,7 @@ function Gate({ roomId, invite }: { roomId: string; invite: string }) {
       <h1>Undangan photobox</h1><p>{isToken(invite) ? 'Masuk ke room untuk mulai foto bersama.' : 'Buka tautan undangan lengkap untuk bergabung.'}</p>
       {isToken(invite) && <button className="button primary" onClick={join} disabled={busy}>{busy ? 'Bergabung…' : 'Gabung room'}<ArrowRight size={17} /></button>}
       {message && <p role="alert" className="error">{message}</p>}
-      <a className="text-link" href="/"><ArrowLeft size={15} /> Halaman awal</a>
+      <a className="text-link" href={basePath}><ArrowLeft size={15} /> Halaman awal</a>
     </section></main><Footer /></>;
 }
 
@@ -302,7 +303,7 @@ function Room({ session }: { session: Session }) {
       {!closed && <button className="button ghost small leave" onClick={leave} disabled={leaving}><LogOut size={16} /> Keluar</button>}</div>
   </Header>
     {closed ? <main className="wrap center-page"><section className="gate-card"><h1>Room ditutup</h1>
-      <a className="button primary" href={albumLink(session)}><Images size={17} /> Buka album</a><a className="text-link" href="/"><ArrowLeft size={15} /> Halaman awal</a>
+      <a className="button primary" href={albumLink(session)}><Images size={17} /> Buka album</a><a className="text-link" href={basePath}><ArrowLeft size={15} /> Halaman awal</a>
     </section></main> : <main className="wrap room">
       <div className="room-heading"><div><h1>Photo Studio</h1><p>Abadikan momen, semua kontrol ada di tanganmu.</p></div>
         <div className="connection"><span className={online ? 'live-dot ready' : 'live-dot'} />{status} · {active}/10 peserta</div>
@@ -502,7 +503,7 @@ function Album({ id, token }: { id: string; token: string }) {
     const controller = new AbortController();
     let objectUrl: string | undefined;
     dialog.current?.showModal();
-    void fetch(`/api/albums/${id}/files/${selected.file.id}`, {
+    void fetch(appPath(`api/albums/${id}/files/${selected.file.id}`), {
       headers: { Authorization: `Bearer ${token}` }, cache: 'no-store', signal: controller.signal,
     }).then(async (response) => {
       if (!response.ok) throw Error(response.status === 410 ? 'Berkas sudah kedaluwarsa.' : 'Foto gagal dimuat.');
@@ -547,7 +548,7 @@ function Album({ id, token }: { id: string; token: string }) {
   }, [id, token]);
   async function download(version: Version, file: AlbumFile) {
     try {
-      const response = await fetch(`/api/albums/${id}/files/${file.id}`, { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store' });
+      const response = await fetch(appPath(`api/albums/${id}/files/${file.id}`), { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store' });
       if (!response.ok) throw Error(response.status === 410 ? 'Berkas sudah kedaluwarsa.' : 'Unduhan gagal.');
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement('a');
@@ -565,7 +566,7 @@ function Album({ id, token }: { id: string; token: string }) {
   }, [selected, tick]);
   const fileLabel = (file: AlbumFile) => file.position ? `Foto ${file.position}` : 'Photostrip';
   return <><Header>{isToken(token) && <CopyButton text={location.href}>Tautan album</CopyButton>}</Header>
-    <main className="wrap album"><a className="text-link" href="/"><ArrowLeft size={16} /> Halaman awal</a>
+    <main className="wrap album"><a className="text-link" href={basePath}><ArrowLeft size={16} /> Halaman awal</a>
       <div className="room-heading"><div><h1>Album privat</h1><p>Foto dan photostrip tersedia selama satu jam sejak disimpan.</p></div><span className="connection"><LockKeyhole size={15} /> Akses via tautan</span></div>
       {message && <p className="notice" role="status">{message}</p>}
       {!versions && !message && <p role="status">Memuat album…</p>}
@@ -589,7 +590,7 @@ function Album({ id, token }: { id: string; token: string }) {
     </main><Footer /></>;
 }
 
-const [, page, id] = location.pathname.split('/');
+const [page, id] = location.pathname.slice(basePath.length).split('/');
 const token = location.hash.slice(1);
 const screen = page === 'room' && isId(id) ? <Gate roomId={id} invite={token} /> : page === 'album' && isId(id) ? <Album id={id} token={token} /> : <Home />;
 createRoot(document.getElementById('root')!).render(screen);

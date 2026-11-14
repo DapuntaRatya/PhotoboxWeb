@@ -1,4 +1,5 @@
 import formats from './photo-formats.json';
+import { appPath } from './paths';
 
 export type Seat = string;
 export const pairKey = (a: string, b: string) => [a, b].sort().join(':');
@@ -49,7 +50,7 @@ export type Version = { id: string; version: number; stored: number; expires: nu
 export async function api<T>(path: string, credential?: string, init?: RequestInit): Promise<T> {
   const headers = new Headers(init?.headers);
   if (credential) headers.set('Authorization', `Bearer ${credential}`);
-  const response = await fetch(`/api${path}`, { ...init, headers, cache: 'no-store' });
+  const response = await fetch(appPath(`api${path}`), { ...init, headers, cache: 'no-store' });
   if (!response.ok) {
     const error = await response.json().catch(() => ({}));
     throw Error(error.error ?? 'Permintaan gagal. Coba lagi.');
@@ -57,7 +58,7 @@ export async function api<T>(path: string, credential?: string, init?: RequestIn
   return response.json();
 }
 
-export const inviteLink = (session: Session) => `${location.origin}/room/${session.roomId}#${session.invite}`;
-export const albumLink = (session: Session) => `/album/${session.albumId}#${session.albumToken}`;
+export const inviteLink = (session: Session) => `${location.origin}${appPath(`room/${session.roomId}`)}#${session.invite}`;
+export const albumLink = (session: Session) => appPath(`album/${session.albumId}#${session.albumToken}`);
 export const sessionKey = (id: string) => `photobox:session:${id}`;
 export const mirrorKey = (id: string) => `photobox:mirror:${id}`;

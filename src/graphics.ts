@@ -3,6 +3,7 @@ import type { LiveMask } from './live-mask';
 import { type Filters, type Layout, type Person } from './types';
 import formats from './photo-formats.json';
 import { backgroundPreset, framePreset, loadTemplateArt, templateAsset } from './templates';
+import { appPath } from './paths';
 
 export function canvas(width = 1, height = 1) {
   return Object.assign(document.createElement('canvas'), { width, height });
@@ -153,9 +154,9 @@ export class ColorRenderer {
 }
 
 export async function makeSegmenter(runningMode: 'VIDEO' | 'IMAGE') {
-  const files = await FilesetResolver.forVisionTasks('/vision');
+  const files = await FilesetResolver.forVisionTasks(appPath('vision'));
   return ImageSegmenter.createFromOptions(files, {
-    baseOptions: { modelAssetPath: '/vision/person.tflite', delegate: 'CPU' },
+    baseOptions: { modelAssetPath: appPath('vision/person.tflite'), delegate: 'CPU' },
     runningMode, outputCategoryMask: false, outputConfidenceMasks: true,
   });
 }

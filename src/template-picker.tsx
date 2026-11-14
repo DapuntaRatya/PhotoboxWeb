@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Ban, Check, Search, Upload } from 'lucide-react';
 import { backgrounds, frames, templateThumbnail, type Background } from './templates';
+import { appPath } from './paths';
 
 export function TemplatePicker({ background, frame, choose, upload }: {
   background: string; frame: string; choose: (kind: 'background' | 'frame', id: string) => void; upload: () => void;
@@ -40,7 +41,7 @@ export function TemplatePicker({ background, frame, choose, upload }: {
         const bg = kind === 'background' ? item as Background : undefined;
         return <button key={item.id} type="button" className="template-card" aria-pressed={item.id === active} onClick={() => choose(kind, item.id)}>
           <span className={`template-art ${kind === 'frame' ? 'frame-card' : ''}`} style={{ background: bg ? `linear-gradient(145deg, ${bg.colors.join(', ')})` : undefined }}>
-            {item.art && <img src={templateThumbnail(item.art)} alt="" loading="lazy" decoding="async" />}
+            {item.art && <img src={appPath(templateThumbnail(item.art))} alt="" loading="lazy" decoding="async" />}
             {item.id === active && <span className="template-check"><Check size={13} /></span>}
           </span>
           <span>{item.label}</span>

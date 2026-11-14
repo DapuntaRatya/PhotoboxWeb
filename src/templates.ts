@@ -1,4 +1,5 @@
 import catalog from './template-catalog.json';
+import { appPath } from './paths';
 
 export type Template = { id: string; label: string; group: string; art?: string };
 export type Background = Template & { colors: string[] };
@@ -24,7 +25,7 @@ export function templateAsset(url: string, highResolution = false) {
   } else {
     if (assets.size >= limit) assets.delete(assets.keys().next().value!);
     image = new Image();
-    image.src = useUhd ? url.replace('.webp', '-uhd.webp') : url;
+    image.src = appPath(useUhd ? url.replace('.webp', '-uhd.webp') : url);
   }
   assets.set(url, image);
   return image;

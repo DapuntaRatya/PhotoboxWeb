@@ -597,11 +597,12 @@ export async function createApp({ dataDir, now = timestamp, config = process.env
   }
 
   const wss = new WebSocketServer({ noServer: true, maxPayload: 96 * 1024 });
+  const allowedOrigins = new Set(config.PHOTOBOX_ORIGIN?.split(',').map((origin) => origin.trim()).filter(Boolean));
   server.on('upgrade', (req, socket, head) => {
     const origin = req.headers.origin;
-    let allowed = Boolean(origin && origin === config.PHOTOBOX_ORIGIN);
+    let allowed = Boolean(origin && allowedOrigins.has(origin));
     try {
-      if (!config.PHOTOBOX_ORIGIN && origin) {
+      if (!allowedOrigins.size && origin) {
         const url = new URL(origin);
         allowed = url.host === req.headers.host && ['http:', 'https:'].includes(url.protocol);
       }

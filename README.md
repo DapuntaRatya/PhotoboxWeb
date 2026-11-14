@@ -67,7 +67,7 @@ flowchart LR
     A["Browser peserta A"] <-->|"WebRTC · media dan foto draft"| B["Browser peserta B"]
     A <-->|"HTTPS dan WebSocket"| N["Nginx · TLS dan frontend"]
     B <-->|"HTTPS dan WebSocket"| N
-    N <-->|"/api dan /ws"| S["Node.js · room dan album"]
+    N <-->|"/photobox/api dan /photobox/ws"| S["Node.js · room dan album"]
     S --> D[("SQLite · metadata")]
     S --> F["Disk privat · JPEG ekspor"]
 ~~~
@@ -96,43 +96,7 @@ Tes browser memakai Chrome dan memerlukan server yang berjalan. Atur `PHOTOBOX_T
 
 ## Deployment VPS
 
-Konfigurasi contoh tersedia di [deploy/](deploy/). Jalankan perintah Linux berikut setelah masuk ke VPS via SSH dari Windows CMD. Gunakan akun deploy yang punya izin tulis ke checkout dan akses baca repo bila repo privat.
-
-<details>
-<summary>Instalasi pertama</summary>
-
-1. Siapkan Node.js 22.13+, Nginx, coturn, DNS, sertifikat TLS, dan akun layanan `photobox`. Siapkan `/opt/photoboxweb` untuk checkout milik akun deploy.
-2. Clone branch `main` dan bangun frontend.
-
-   ~~~sh
-   git clone --branch main https://github.com/DapuntaRatya/PhotoboxWeb.git /opt/photoboxweb
-   cd /opt/photoboxweb
-   npm ci
-   npm run build
-   ~~~
-
-3. Salin [contoh environment](deploy/photobox.env.example) ke `/etc/photoboxweb.env` dengan izin `0600`. Isi origin HTTPS dan secret TURN. Salin konfigurasi Nginx dan coturn sebelum mengubah domain, sertifikat, atau secret. Tempatkan salinan aktif di konfigurasi sistem.
-4. Pasang unit layanan dan timer dari [deploy/](deploy/). Jalankan `sudo nginx -t` serta `sudo systemctl daemon-reload`, lalu aktifkan Nginx, coturn, `photobox.service`, dan `photobox-cleanup.timer`.
-5. Verifikasi `/api/time` melalui HTTPS. Uji satu room dari dua jaringan berbeda untuk memeriksa WebSocket dan TURN.
-
-</details>
-
-<details>
-<summary>Update versi dengan Git</summary>
-
-Jalankan dari VPS setelah perubahan masuk ke `main`.
-
-~~~sh
-cd /opt/photoboxweb
-git pull --ff-only origin main
-npm ci
-npm run build
-sudo systemctl restart photobox.service
-~~~
-
-Verifikasi `/api/time` dan buka studio setelah restart. SQLite dan ekspor berada di `/var/lib/photoboxweb`, sedangkan konfigurasi aktif berada di `/etc`. Simpan perubahan mesin dan secret di lokasi tersebut agar checkout tetap bersih saat menjalankan `git pull`.
-
-</details>
+Nginx melayani HTTPS dan merutekan proyek berdasarkan path. PhotoboxWeb berada di `/photobox/`. Root dan rute yang belum terdaftar mengembalikan 404. [Panduan instalasi, update Git, dan penambahan proyek](deploy/README.md)
 
 <div align="center">
 
